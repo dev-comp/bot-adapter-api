@@ -38,6 +38,46 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>3.0.1</version>
+        <extensions>true</extensions>
+        <!--<configuration>-->
+          <!--<instructions>-->
+            <!--<Private-Package>com.bftcom.osgi.*</Private-Package>-->
+            <!--<Export-Package>com.bftcom.devcomp.bots</Export-Package>-->
+            <!--<Import-Package>!com.sun.*,!groovy.*,!jersey.repackaged.com.google.common.*,*</Import-Package>-->
+            <!--<Bundle-Activator>com.bftcom.devcomp.bots.Activator</Bundle-Activator>-->
+            <!--<Bundle-SymbolicName>TelegramBot</Bundle-SymbolicName>-->
+            <!-- embed all compile and runtime scope dependencies -->
+            <!--<Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>-->
+            <!--<Embed-Dependency>*;scope=compile|runtime;inline=true</Embed-Dependency>-->
+            <!--<Embed-Dependency>slf4j-api,logback-classic</Embed-Dependency>-->
+            <!--<Import-Package>!com.sun.jdi,*</Import-Package>-->
+            <!--<Embed-Dependency>*</Embed-Dependency>-->
+            <!-- inline all non-pom dependencies, except those with scope runtime -->
+
+            <!--<Embed-Dependency>*;scope=!runtime;type=!pom;inline=true</Embed-Dependency>-->
+            <!--<Embed-Dependency>*;scope=!provided</Embed-Dependency>-->
+            <!--<Embed-Dependency>*;scope=compile</Embed-Dependency>-->
+            <!--<Embed-Directory>osgi-inf/libs</Embed-Directory>-->
+            <!--<Embed-Transitive>true</Embed-Transitive>-->
+          <!--</instructions>-->
+        <!--</configuration>-->
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <archive>
+            <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+          </archive>
+        </configuration>
+      </plugin>
+
     </plugins>
 
   </build>

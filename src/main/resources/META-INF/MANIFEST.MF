@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1474076674125
+Build-Jdk: 1.8.0_73
+Built-By: p.shapoval
+Bundle-ManifestVersion: 2
+Bundle-Name: bot-adapter-api
+Bundle-SymbolicName: com.bftcom.devcomp.api.bot-adapter-api
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.bftcom.devcomp.api;version="1.0.0"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.0.0.201509101326

@@ -19,4 +19,7 @@ public interface IBotManager {
    * @return true if a bot session identified by id stopped  without errors
    */
   boolean stopBotSession(String id);
+
+
+  void stopAllBotSessions();
 }
