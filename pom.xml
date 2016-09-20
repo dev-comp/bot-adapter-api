@@ -5,6 +5,13 @@
   <groupId>com.bftcom.devcomp.api</groupId>
   <artifactId>bot-adapter-api</artifactId>
   <version>1.0.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>5.0.0</version>
+    </dependency>
+  </dependencies>
   <packaging>jar</packaging>
 
   <name>bot-adapter-api</name>
