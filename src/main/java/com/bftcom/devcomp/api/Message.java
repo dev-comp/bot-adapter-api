@@ -23,6 +23,7 @@ public class Message {
     this.command = command;
   }
 
+  @SuppressWarnings("unused")
   public Map<String, String> getUserProperties() {
     return userProperties;
   }
@@ -31,6 +32,7 @@ public class Message {
     this.userProperties = userProperties;
   }
 
+  @SuppressWarnings("unused")
   public Map<String, String> getServiceProperties() {
     return serviceProperties;
   }
