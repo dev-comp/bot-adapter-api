@@ -5,8 +5,8 @@ package com.bftcom.devcomp.api;
  */
 public interface IBotConst {
   // Префиксы очередей
-  String QUEUE_SERVICE_PREFIX = "SERVICE_QUEUE_";     // Очереди, которые слушает сервис
-  String QUEUE_ADAPTER_PREFIX = "ADAPTER_QUEUE_";     // Очереди, которые слушают адаптеры
+  String QUEUE_TO_SERVICE_PREFIX = "TO_SERVICE_QUEUE_";     // Очереди, которые слушает сервис
+  String QUEUE_TO_ADAPTER_PREFIX = "TO_ADAPTER_QUEUE_";     // Очереди, которые слушают адаптеры
   String QUEUE_TO_BOT_PREFIX = "TO_BOT_QUEUE_";       // Очереди, которые слушают боты
   String QUEUE_FROM_BOT_PREFIX = "FROM_BOT_QUEUE_";   // Очереди, которые слушает сервис (для каждого бота собственная очередь)
 
