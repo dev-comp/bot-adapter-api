@@ -30,6 +30,7 @@ public abstract class AbstractMessengerAdapter<E> implements IMessengerAdapter {
 
 
   public AbstractMessengerAdapter() {
+    System.out.println("AbstractMessengerAdapter");
     logger.info("creating a new bot manager adapter");
     factory = new ConnectionFactory();
     try {
