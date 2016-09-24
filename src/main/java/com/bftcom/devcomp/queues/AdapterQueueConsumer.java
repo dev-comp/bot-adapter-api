@@ -56,13 +56,13 @@ public class AdapterQueueConsumer extends AbstractDefaultConsumer {
 
     switch (command) {
       case ADAPTER_START_BOT:
-        adapter.startBotSession(m.getUserProperties().get(Configuration.BOT_TOKEN), m.getUserProperties(), m.getServiceProperties());
+        adapter.startBotSession(m.getServiceProperties().get(IBotConst.PROP_BOT_NAME), m.getUserProperties(), m.getServiceProperties());
         break;
       case ADAPTER_STOP_ALL_BOTS:
         adapter.stopAllBotSessions();
         break;
       case ADAPTER_STOP_BOT:
-        adapter.stopBotSession(m.getUserProperties().get(Configuration.BOT_TOKEN));
+        adapter.stopBotSession(m.getServiceProperties().get(IBotConst.PROP_BOT_NAME));
         break;
     }
   }
