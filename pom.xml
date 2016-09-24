@@ -11,6 +11,34 @@
       <artifactId>org.osgi.core</artifactId>
       <version>5.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.rabbitmq</groupId>
+      <artifactId>amqp-client</artifactId>
+      <version>3.6.3</version>
+      <!--<scope>provided</scope>-->
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.21</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.7</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.1.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.6.3</version>
+    </dependency>
   </dependencies>
   <packaging>jar</packaging>
 
@@ -50,13 +78,13 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <version>3.0.1</version>
         <extensions>true</extensions>
-        <!--<configuration>-->
-          <!--<instructions>-->
+        <configuration>
+          <instructions>
             <!--<Private-Package>com.bftcom.osgi.*</Private-Package>-->
             <!--<Export-Package>com.bftcom.devcomp.bots</Export-Package>-->
-            <!--<Import-Package>!com.sun.*,!groovy.*,!jersey.repackaged.com.google.common.*,*</Import-Package>-->
-            <!--<Bundle-Activator>com.bftcom.devcomp.bots.Activator</Bundle-Activator>-->
-            <!--<Bundle-SymbolicName>TelegramBot</Bundle-SymbolicName>-->
+            <Import-Package>!com.sun.*,!groovy.*,!jersey.repackaged.com.google.common.*,*</Import-Package>
+            <Bundle-Activator>com.bftcom.devcomp.Activator</Bundle-Activator>
+            <Bundle-SymbolicName>TelegramBot</Bundle-SymbolicName>
             <!-- embed all compile and runtime scope dependencies -->
             <!--<Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>-->
             <!--<Embed-Dependency>*;scope=compile|runtime;inline=true</Embed-Dependency>-->
@@ -67,11 +95,11 @@
 
             <!--<Embed-Dependency>*;scope=!runtime;type=!pom;inline=true</Embed-Dependency>-->
             <!--<Embed-Dependency>*;scope=!provided</Embed-Dependency>-->
-            <!--<Embed-Dependency>*;scope=compile</Embed-Dependency>-->
-            <!--<Embed-Directory>osgi-inf/libs</Embed-Directory>-->
-            <!--<Embed-Transitive>true</Embed-Transitive>-->
-          <!--</instructions>-->
-        <!--</configuration>-->
+            <Embed-Dependency>*;scope=compile</Embed-Dependency>
+            <Embed-Directory>osgi-inf/libs</Embed-Directory>
+            <Embed-Transitive>true</Embed-Transitive>
+          </instructions>
+        </configuration>
       </plugin>
 
       <plugin>

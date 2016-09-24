@@ -6,7 +6,7 @@ import java.util.Map;
  * @author ikka
  * @date: 16.09.2016.
  */
-public interface IBotManager {
+public interface IMessengerAdapter {
   /**
    * @param id     Id of a new bot instance for fast access
    * @return true if a bot session started without errors
@@ -21,4 +21,6 @@ public interface IBotManager {
 
 
   void stopAllBotSessions();
+
+  String getAdapterName();
 }
